@@ -2355,8 +2355,8 @@
      *
      ********************************************************************************/
 
-    $.fn.datetimepicker = function (options) {
-        return this.each(function () {
+    function instanciateDatetimePicker (el, options) {
+        return el.each(function () {
             var $this = $(this);
             if (!$this.data('DateTimePicker')) {
                 // create a private copy of the defaults object
@@ -2364,7 +2364,15 @@
                 $this.data('DateTimePicker', dateTimePicker($this, options));
             }
         });
+    }
+
+    $.fn.datetimepicker = function (options) {
+        return instanciateDatetimePicker(this, options);
     };
+
+    if (typeof exports === 'object') {
+      module.exports = instanciateDatetimePicker;
+    }
 
     $.fn.datetimepicker.defaults = {
         timeZone: 'Etc/UTC',
