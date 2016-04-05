@@ -6,10 +6,10 @@
         "url": "https://github.com/eonasdan/bootstrap-datetimepicker/issues"
     },
     "peerDependencies": {
-        "moment": "~2.8",
-        "moment-timezone" : "~0.4",
+        "moment": "^2.12",
+        "moment-timezone" : "^0.5.3",
         "bootstrap": "^3.3",
-        "jquery": ">=1.8.3 <2.2.0"
+        "jquery": ">=1.8.3"
     },
     "description": "A date/time picker component designed to work with Bootstrap 3 and Momentjs. For usage, installation and demos see Project Site on GitHub",
     "devDependencies": {
